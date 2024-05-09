@@ -1,11 +1,14 @@
-import Image from "next/image";
 import { Button } from "./ui/button";
 import { MenuIcon } from "lucide-react";
 
 const Header = () => {
   return (
     <div className="flex justify-between pt-6 px-5">
-      <Image src="/logo.png" alt="Foods" height={30} width={100} />
+      {/* <Image src="/logo.png" alt="Foods" height={30} width={100} /> */}
+
+      <h1 className="font-bold text-2xl">
+        Seu<span className="text-primary">Lanche</span>.com
+      </h1>
 
       <Button
         size="icon"
