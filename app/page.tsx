@@ -2,11 +2,16 @@ import Image from "next/image";
 import CategoryList from "./_components/category-list";
 import Header from "./_components/header";
 import Search from "./_components/search";
+import ProductList from "./_components/product-list";
+import { Button } from "./_components/ui/button";
+import { ChevronRightIcon } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="space-y-6">
-      <Header />
+      <div className="px-5">
+        <Header />
+      </div>
 
       <div className="px-5">
         <Search />
@@ -16,7 +21,7 @@ export default function Home() {
         <CategoryList />
       </div>
 
-      <div className="px-5 flex md:flex-row justify-between gap-5">
+      <div className=" flex md:flex-row justify-between gap-5 px-5">
         <Image
           src="/promo-banner-01.png"
           alt="Até 30% de desconto"
@@ -34,6 +39,21 @@ export default function Home() {
           className="w-full hidden md:block"
           quality={100}
         />
+      </div>
+
+      <div className="flex justify-between items-center px-5">
+        <h2 className="font-semibold">Pedidos Recomendados</h2>
+
+        <Button
+          className="text-primary p-0 hover:bg-transparent"
+          variant="ghost"
+        >
+          Ver todos <ChevronRightIcon />
+        </Button>
+      </div>
+
+      <div className="pl-5">
+        <ProductList />
       </div>
     </div>
   );
