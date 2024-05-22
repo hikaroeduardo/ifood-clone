@@ -51,7 +51,9 @@ const ProductPage = async ({ params: { id } }: ProductPageProps) => {
         <BtnBackRouter />
       </div>
 
-      <ProductInfo product={product} complementaryProducts={juices} />
+      <div className="mt-[-1.5rem] relative bg-white rounded-tl-3xl rounded-tr-3xl">
+        <ProductInfo product={product} complementaryProducts={juices} />
+      </div>
     </div>
   );
 };
