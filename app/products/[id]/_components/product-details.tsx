@@ -126,13 +126,7 @@ const ProductInfo = ({
               <TimerIcon size={14} />
             </div>
 
-            {Number(product.restaurant.deliveryFee) > 0 ? (
-              <p className="text-xs font-semibold">
-                {formatCurrency(Number(product.restaurant.deliveryFee))}
-              </p>
-            ) : (
-              <p>Grátis</p>
-            )}
+            <p>{product.restaurant.deliveryTimeMinutes} min</p>
           </div>
         </Card>
       </div>
