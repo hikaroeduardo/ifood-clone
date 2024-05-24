@@ -63,14 +63,15 @@ export default async function Home() {
       <div className="flex justify-between items-center px-5">
         <h2 className="font-semibold">Pedidos Recomendados</h2>
 
-        <Link href={`/products/recommended`}>
-          <Button
-            className="text-primary p-0 hover:bg-transparent"
-            variant="ghost"
-          >
+        <Button
+          className="text-primary p-0 hover:bg-transparent"
+          variant="ghost"
+          asChild
+        >
+          <Link href={`/products/recommended`}>
             Ver todos <ChevronRightIcon />
-          </Button>
-        </Link>
+          </Link>
+        </Button>
       </div>
 
       <div className="pl-5">
@@ -80,14 +81,15 @@ export default async function Home() {
       <div className="flex justify-between items-center px-5">
         <h2 className="font-semibold">Restaurantes Recomendados</h2>
 
-        <Link href="/restaurants/recommended">
-          <Button
-            className="text-primary p-0 hover:bg-transparent"
-            variant="ghost"
-          >
+        <Button
+          className="text-primary p-0 hover:bg-transparent"
+          variant="ghost"
+          asChild
+        >
+          <Link href="/restaurants/recommended">
             Ver todos <ChevronRightIcon />
-          </Button>
-        </Link>
+          </Link>
+        </Button>
       </div>
 
       <div className="pl-5">
