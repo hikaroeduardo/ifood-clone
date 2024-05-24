@@ -63,12 +63,14 @@ export default async function Home() {
       <div className="flex justify-between items-center px-5">
         <h2 className="font-semibold">Pedidos Recomendados</h2>
 
-        <Button
-          className="text-primary p-0 hover:bg-transparent"
-          variant="ghost"
-        >
-          Ver todos <ChevronRightIcon />
-        </Button>
+        <Link href={`/products/recommended`}>
+          <Button
+            className="text-primary p-0 hover:bg-transparent"
+            variant="ghost"
+          >
+            Ver todos <ChevronRightIcon />
+          </Button>
+        </Link>
       </div>
 
       <div className="pl-5">
